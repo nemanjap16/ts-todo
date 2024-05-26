@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TODO + TS" />
+    <meta name="author" content="Nemanja" />
+    <script type="module" src="/src/main.ts" defer></script>
+    <title>TODO + TS</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="todo-container">
+        <form class="todo-form">
+          <h1>Todo</h1>
+          <input
+            id="new-todo"
+            class="new-todo create-todo shadow"
+            type="text"
+            placeholder="Create a new todo..."
+            aria-label="Create a new todo"
+            autocomplete="off"
+          />
+        </form>
+        <ul
+          id="draggable-list"
+          class="tasks shadow"
+          aria-label="todo list"
+        ></ul>
+        <div class="controls">
+          <div><span class="total-items"></span> items left</div>
+          <div class="filters">
+            <span class="all-filter" tabindex="0">All</span>
+            <span class="active-filter" tabindex="0">Active</span>
+            <span class="completed-filter" tabindex="0">Completed</span>
+          </div>
+          <button class="clear-completed">Clear Completed</button>
+        </div>
+        <p class="drag-info">Drag and drop to reorder list</p>
+      </div>
+    </main>
+  </body>
+</html>

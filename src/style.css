@@ -1,0 +1,221 @@
+@import "./css/reset.css";
+/* Fonts */
+@import "@fontsource-variable/nunito";
+@import "@fontsource-variable/nunito-sans";
+
+:root {
+  --slate-900: hsl(222, 47%, 11%);
+  --slate-800: hsl(217, 33%, 17%);
+  --slate-600: hsl(215, 19%, 35%);
+  --slate-400: hsl(215, 20%, 65%);
+  --blue-200: hsl(213, 97%, 87%);
+  --red-600: hsl(0, 72%, 51%);
+  --indigo-600: hsl(243, 75%, 59%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Nunito Variable", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  background-color: var(--slate-900);
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+
+  background: linear-gradient(
+      to left,
+      rgba(119, 27, 210, 0.8) 25%,
+      rgba(112, 27, 141, 0.8)
+    ),
+    url("./assets/img/bg-img.jpg");
+  background-position: center 40%;
+  background-size: cover;
+}
+
+h1 {
+  color: var(--blue-200);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 6px;
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.drag-info {
+  font-family: "Nunito Sans Variable", sans-serif;
+  font-weight: 600;
+  font-size: 1.115rem;
+  color: var(--slate-600);
+  text-align: center;
+  margin-top: 2.25rem;
+}
+
+.todo-container {
+  width: 50vw;
+  display: grid;
+  margin: 0 auto;
+  height: min-content;
+
+  position: absolute;
+  inset: 0;
+}
+
+form {
+  margin-top: 2rem;
+}
+
+.tasks {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  background-color: var(--slate-900);
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+input.create-todo {
+  width: 100%;
+  margin-bottom: 1.75rem;
+  border-radius: 6px;
+  border: none;
+}
+
+.todo,
+.new-todo {
+  background-color: var(--slate-800);
+  color: var(--slate-400);
+  border-bottom: 1px solid var(--slate-600);
+  padding: 1rem 2.25rem;
+  font-weight: 400;
+  font-size: 1.15rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo:last-of-type {
+  border: none;
+}
+
+.todo:hover {
+  cursor: grab;
+}
+
+.dragging {
+  background-color: #000000;
+  cursor: grabbing;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--slate-600);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1rem 2.25rem;
+  background-color: var(--slate-800);
+  border-top: 1px solid var(--slate-600);
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  font-family: "Nunito Sans Variable", sans-serif;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 800;
+}
+
+input {
+  font-family: "Nunito Sans Variable", sans-serif;
+}
+
+input::placeholder {
+  color: var(--slate-600);
+  font-weight: 600;
+}
+
+input:focus {
+  outline: 1px solid var(--blue-200);
+  color: var(--blue-200);
+}
+
+span.todo-text {
+  margin-left: 1.125rem;
+}
+
+input:checked + span.todo-text {
+  text-decoration: line-through;
+}
+
+.filters span:hover {
+  cursor: pointer;
+}
+
+span[tabindex]:focus {
+  color: var(--blue-200);
+}
+
+button.clear-completed {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--slate-600);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Nunito Sans Variable", sans-serif;
+}
+
+.edit-btn {
+  margin: 0 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--indigo-600);
+  cursor: pointer;
+  color: var(--blue-200);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Nunito Sans Variable", sans-serif;
+  padding: 0.3rem 1rem;
+}
+
+.delete-btn {
+  border: none;
+  border-radius: 4px;
+  background-color: var(--red-600);
+  cursor: pointer;
+  color: var(--blue-200);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Nunito Sans Variable", sans-serif;
+  padding: 0.3rem 1rem;
+}
+
+button.clear-completed {
+  border: none;
+  border-radius: 4px;
+  background-color: var(--slate-600);
+  cursor: pointer;
+  color: var(--blue-200);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Nunito Sans Variable", sans-serif;
+  padding: 0.3rem 1rem;
+}
