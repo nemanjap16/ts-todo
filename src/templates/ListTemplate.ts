@@ -4,7 +4,7 @@ import ListItem from "../model/ListItem";
 const totalItems = document.querySelector(".total-items") as HTMLSpanElement;
 
 interface ListTemplateInterface {
-  clear(): void;
+  clearListItems(): void;
   render(items: ListItem[]): void;
 }
 
@@ -22,7 +22,7 @@ export default class ListTemplate implements ListTemplateInterface {
     return ListTemplate.instance;
   }
 
-  clear(): void {
+  clearListItems(): void {
     const tasks = document.querySelector("ul.tasks") as HTMLUListElement;
     tasks.innerHTML = "";
   }

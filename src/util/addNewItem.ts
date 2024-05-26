@@ -17,10 +17,7 @@ export const addNewItem = () => {
     if (!input.value) {
       return;
     } else {
-      const itemId: string = uuidv4();
-      const description = input.value.trim();
-
-      const item = new listItem(itemId, description, false);
+      const item = new listItem(uuidv4(), input.value.trim(), false);
       list.addItem(item);
       list.saveList();
       listTemplate.render(list.items);

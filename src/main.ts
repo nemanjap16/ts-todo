@@ -20,25 +20,25 @@ const initApp = () => {
   let list = List.getInstance();
   const listTemplate = ListTemplate.getInstance();
 
-  listTemplate.clear();
+  listTemplate.clearListItems();
   list.load();
   listTemplate.render(list.items);
   addNewItem();
 
   showAllItems.addEventListener("click", () => {
-    listTemplate.clear();
+    listTemplate.clearListItems();
     list.allItems();
     listTemplate.render(list.items);
   });
 
   activeItems.addEventListener("click", () => {
-    listTemplate.clear();
+    listTemplate.clearListItems();
     list.activeItems();
     listTemplate.render(list.items);
   });
 
   completedItems.addEventListener("click", () => {
-    listTemplate.clear();
+    listTemplate.clearListItems();
     list.completedItems();
     listTemplate.render(list.items);
   });
