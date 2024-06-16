@@ -7,7 +7,6 @@ This app is good for learning and practice. Also has many features like drag and
 
 #### Features
 
-- Dark and light mode
 - You can add, edit, create and delete todo's
 - Mark todo's as completed
 - You can filter by status (Completed, Active, All)
@@ -48,7 +47,6 @@ export const dragList = () => {
   sortableList.addEventListener("dragover", (e) => {
     e.preventDefault();
     const afterElement = getDragAfterElement(sortableList, e.clientY);
-    // const currentElement = document.querySelector(".dragging");
     if (afterElement == null) {
       sortableList.appendChild(draggedItem);
     } else {
